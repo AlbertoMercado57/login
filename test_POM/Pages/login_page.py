@@ -9,7 +9,6 @@ class LoginPage:
         self.username_id = "username"
         self.password_id = "password"
         self.login_xpath = "//button[@type='submit']"
-        self.invalid_banner = "flash-message"
 
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_id).send_keys(username)
@@ -19,9 +18,3 @@ class LoginPage:
 
     def click_login(self):
         self.driver.find_element_by_xpath(self.login_xpath).click()
-
-    def invalid_banner(self):
-        self.driver.find_element_by_id(self.invalidja_banner())
-
-
-'''Return key word optional '''
