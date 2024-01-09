@@ -16,6 +16,7 @@ def setup(request):
     print("Test Start")
     yield
     driver.close()
+    driver.quit()
     print("Test Complete")
 
 

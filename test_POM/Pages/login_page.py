@@ -6,9 +6,10 @@ class LoginPage:
 
     def __init__(self, driver):
         self.driver = driver
-        self.username_id = "username"
-        self.password_id = "password"
+        self.username_id = 'username'
+        self.password_id = 'password'
         self.login_xpath = "//button[@type='submit']"
+        self.flash_message_id = 'flash-messages'
 
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_id).send_keys(username)
@@ -18,3 +19,6 @@ class LoginPage:
 
     def click_login(self):
         self.driver.find_element_by_xpath(self.login_xpath).click()
+
+    def flash_message(self):
+        self.driver.find_element_by_id(self.flash_message_id)
