@@ -13,7 +13,7 @@ class TestErrLogin():
         login.enter_username(utils.BAD_USER)
         login.enter_password(utils.PASSWORD)
         login.click_login()
-        assert LoginPage.flash_message, ' Your username is invalid!'
+        assert login.flash_message, ' Your username is invalid!'
 
     def test_ErrPass(self):
         driver = self.driver
@@ -22,4 +22,4 @@ class TestErrLogin():
         login.enter_username(utils.USERNAME)
         login.enter_password(utils.BAD_PASS)
         login.click_login()
-        assert LoginPage.flash_message, ' Your password is invalid!'
+        assert login.flash_message, ' Your password is invalid!'
